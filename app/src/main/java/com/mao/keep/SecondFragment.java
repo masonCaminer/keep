@@ -24,6 +24,7 @@ public class SecondFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        assert getArguments() != null;
         String myArg = SecondFragmentArgs.fromBundle(getArguments()).getMyArg();
         TextView textView = view.findViewById(R.id.textview_second);
         textView.setText(getString(R.string.hello_second_fragment, myArg));
